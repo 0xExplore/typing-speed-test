@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    color: #f1f1f1;
+    font-family: 'Russo One', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+main{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* backgourd watermark text */
+.bg-txt{
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+    color: #ffffff0a;
+}
+/* typing area */
+.text-container{
+    width: 40%;
+}
+#displayText{
+    max-height: 150px;
+}
+.input-text{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(0, 174, 255);
+    color: white;
+}
+textarea:focus{
+    outline: none;
+}
+.restart{
+    display: block;
+    background-color: rgb(5, 87, 180);
+    padding: 4px 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: auto;
+    position: relative;
+}
+
+.result{
+    display: none;
+}
+
+
+/* speed */
+
+.speed-meter{
+    background-color: #1f1f1f;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/speed-map.png');
+    background-size: 102%;
+    background-repeat: no-repeat;
+    transition: .8s;
+    background-position: 10% 4%;
+    margin: 24px;
+    box-shadow: 0px 0px 8px 2px #090808, inset 0px 0px 10px #07ac07;
+    
+}
+.gage{
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 130px solid red;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    border-radius: 10px;
+    transform: rotate(-34deg);
+    /* 
+        max rotate(215deg)
+        1.78deg = 1 WPM 
+    */
+    transform-origin: right;
+}
+.gage:after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    position: absolute;
+    right: -136px;
+    border-radius: 100%;
+    top: -10px;
+    box-shadow: 0px 0px 4px 1px red;
+}
+
+.speed-meter div:last-child{
+    position: absolute;
+    bottom: 30px;
+    height: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f40a;
+}
+
+/* timer */
+.timer{
+    background-color: #1f1f1f;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/fuel.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: .8s;
+    background-position: 0% -40%;
+    margin: 24px;
+    box-shadow: 0px 0px 8px 2px #090808, inset 0px 0px 10px #07ac8d;
+    
+}
+.timer-gage{
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 70px solid red;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    border-radius: 10px;
+    transform: rotate(165deg);
+    transform-origin: right;
+}
+.timer-gage:after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    position: absolute;
+    right: -79px;
+    border-radius: 100%;
+    top: -10px;
+    box-shadow: 0px 0px 4px 1px red;
+}
+
+.timer div:last-child{
+    position: absolute;
+    bottom: 30px;
+    height: 40px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f40a;
+}
+
+.correct {
+    /* color: green; */
+    background-color: green;
+}
+.incorrect {
+    /* color: red; */
+    background-color: red;
+}
+
+
+/* ------------ */
+@media only screen and (max-width: 900px) {
+    main{
+        flex-direction: column;
+        margin: 4%;
+    }
+    .text-container{
+        width: 100%;
+        text-align: center;
+    }
+    .bg-txt{
+        font-size: 3rem ;
+    }
+}

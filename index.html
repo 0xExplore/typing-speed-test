@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingSpeedTest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-txt">TypingSpeedTest</div>
+    <!-- result -->
+    <div id="result" class="result">
+        <div>Your speed: <span id="y-speed"></span> WPM</div>
+        <div>Your accuracy: <span id="accuracy"></span>%</div>
+        <a href="/" class="restart">restart</a>
+    </div>
+    <main>
+        <!-- speed metesr -->
+        <div class="speed-meter">
+            <div id="gage" class="gage"></div>
+            <div> <span id="speed">0</span> &nbsp;&nbsp; <span>WPM</span></div>
+        </div>
+
+        <!-- typing area -->
+
+        <!-- <div id="timer"></div> -->
+        <div class="text-container" id="text-container">
+            <div id="displayText"></div>
+            <textarea id="inputText" class="input-text" placeholder="Start typing ..."></textarea>
+        </div>
+
+        <!-- timer -->
+        <div class="timer">
+            <div id="timer-gage" class="timer-gage"></div>
+            <div> <span id="timer">0</span> &nbsp;&nbsp; <span>SEC</span></div>
+        </div>
+
+        
+    </main>
+
+    
+    <!-- JavaScript -->
+    <script src="javascript.js"></script>
+
+
+</body>
+
+</html>
