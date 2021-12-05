@@ -18,7 +18,7 @@ https://mukesh0x0.github.io/typing-speed-test/
 
 ## Screenshots
 
-![App Screenshot]()
+![App Screenshot](https://raw.githubusercontent.com/mukesh0x0/typing-speed-test/main/typing-speed-test.png)
 
 
 
