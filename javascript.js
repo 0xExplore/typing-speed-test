@@ -1,5 +1,5 @@
-// let tmpText = "This is just a temporary text to test our TypingSpeed test app."
-const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
+let tmpText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime velit ad a fugit vero expedita nihil pariatur, accusantium non hic est animi vitae quisquam doloremque odit ea id modi quis."
+// const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
 
 const displayTextElement = document.getElementById('displayText')
 const inputTextElement = document.getElementById('inputText')
@@ -15,27 +15,28 @@ const resultAccuracyElement = document.getElementById('accuracy')
 
 
 
-function getRandomQuote() {
-    return fetch(RANDOM_QUOTE_API_URL)
-      .then(response => response.json())
-      .then(data => data.content)
-  }
+// function getRandomQuote() {
+//     return fetch(RANDOM_QUOTE_API_URL)
+//       .then(response => response.json())
+//       .then(data => data.content)
+//   }
 // rendering text to Display
-async function renderDisplayText(){
-    const quote = await getRandomQuote()
+function renderDisplayText(){
+    // const quote = await getRandomQuote()
+
     // clearing displayed/typed text and rendring new text
     displayTextElement.innerText = ""
     inputTextElement.value = null
-    quote.split('').forEach(character => {
-        const charSpan = document.createElement('span')
-        charSpan.innerText = character
-        displayTextElement.appendChild(charSpan)
-    })
-    // tmpText.split('').forEach(character => {
+    // quote.split('').forEach(character => {
     //     const charSpan = document.createElement('span')
-    //     charSpan.innerHTML = character
+    //     charSpan.innerText = character
     //     displayTextElement.appendChild(charSpan)
     // })
+    tmpText.split('').forEach(character => {
+        const charSpan = document.createElement('span')
+        charSpan.innerHTML = character
+        displayTextElement.appendChild(charSpan)
+    })
 }
 renderDisplayText()
 
